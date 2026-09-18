@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Support and troubleshooting for Truck Simulator Legends: USA.">
-  <meta name="theme-color" content="#111827">
+  <meta name="theme-color" content="#071827">
   <title>Support | Truck Simulator Legends: USA</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111827'/%3E%3Cpath d='M12 20h28v24H12zM40 28h8l6 8v8H40z' fill='%23f7b500'/%3E%3Ccircle cx='22' cy='46' r='6' fill='%23fff'/%3E%3Ccircle cx='46' cy='46' r='6' fill='%23fff'/%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23071827'/%3E%3Cpath d='M12 20h28v24H12zM40 28h8l6 8v8H40z' fill='%230391e3'/%3E%3Ccircle cx='22' cy='46' r='6' fill='%23fff'/%3E%3Ccircle cx='46' cy='46' r='6' fill='%23fff'/%3E%3C/svg%3E">
   <style>
     :root {
       color-scheme: dark;
@@ -16,9 +16,9 @@
       --text: #f8fafc;
       --muted: #a9b3c3;
       --line: #293448;
-      --accent: #f7b500;
-      --accent-hover: #ffc72c;
-      --accent-text: #171100;
+      --accent: #0391e3;
+      --accent-hover: #0ac5f8;
+      --accent-text: #03121c;
       --max-width: 1060px;
     }
 
@@ -30,7 +30,7 @@
       margin: 0;
       min-width: 320px;
       background:
-        radial-gradient(circle at 85% -10%, rgba(247, 181, 0, 0.15), transparent 34rem),
+        radial-gradient(circle at 85% -10%, rgba(3, 145, 227, 0.18), transparent 34rem),
         var(--background);
       color: var(--text);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -58,14 +58,19 @@
       gap: 1rem;
     }
 
-    .brand {
-      font-size: 0.9rem;
-      font-weight: 800;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
+    .brand { display: inline-flex; align-items: center; }
+
+    .brand-logo {
+      display: block;
+      width: clamp(118px, 16vw, 158px);
+      height: auto;
     }
 
-    .brand span { color: var(--accent); }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 1.15rem;
+    }
 
     nav a {
       color: var(--muted);
@@ -114,9 +119,9 @@
 
     .contact-card {
       padding: clamp(1.5rem, 4vw, 2.25rem);
-      border: 1px solid #4a4123;
+      border: 1px solid #164a69;
       border-radius: 20px;
-      background: linear-gradient(145deg, #1e1c15, #111722 72%);
+      background: linear-gradient(145deg, #102536, #111722 72%);
       box-shadow: 0 28px 70px rgba(0, 0, 0, 0.25);
     }
 
@@ -242,6 +247,9 @@
     }
 
     @media (max-width: 760px) {
+      .header-inner { flex-wrap: wrap; padding-block: 0.75rem; }
+      nav { gap: 0.85rem; }
+      nav a { font-size: 0.88rem; }
       .intro { grid-template-columns: 1fr; }
       .help-grid, .report-list { grid-template-columns: 1fr; }
       h1 { max-width: 12ch; }
@@ -256,9 +264,12 @@
 <body>
   <header>
     <div class="container header-inner">
-      <div class="brand">Immersive<span>Bytes</span></div>
+      <a class="brand" href="index.html" aria-label="ImmersiveBytes support home">
+        <img class="brand-logo" src="immersivebyte-logo.png" alt="ImmersiveBytes">
+      </a>
       <nav aria-label="Support navigation">
         <a href="#contact">Contact support</a>
+        <a href="privacy-policy.html">Privacy</a>
       </nav>
     </div>
   </header>
@@ -274,8 +285,7 @@
       <aside class="contact-card" id="contact" aria-labelledby="contact-title">
         <h2 id="contact-title">Need help?</h2>
         <p>Email our support team and include your device model, iOS version and a short description of the issue.</p>
-        <!-- Replace YOUR_SUPPORT_EMAIL@example.com in both places before publishing. -->
-        <a class="button" href="mailto:immersiveByte@gmail.com?subject=Truck%20Simulator%20Legends%20Support">Email support</a>
+        <a class="button" href="mailto:immersivebyte@gmail.com?subject=Truck%20Simulator%20Legends%20Support">Email support</a>
       </aside>
     </section>
 
@@ -359,7 +369,7 @@
       </div>
       <div class="privacy-note">
         Learn how the game handles data in the
-        <a href="https://sites.google.com/view/truck-sim-legends-privacy/home">Truck Simulator Legends privacy policy</a>.
+        <a href="privacy-policy.html">Truck Simulator Legends privacy policy</a>.
       </div>
     </section>
   </main>
@@ -367,8 +377,7 @@
   <footer>
     <div class="container footer-inner">
       <span>© 2026 ImmersiveBytes</span>
-      <!-- Replace the visible email address before publishing. -->
-      <span>Support: YOUR_SUPPORT_EMAIL@example.com</span>
+      <span>Support: <a href="mailto:immersivebyte@gmail.com">immersivebyte@gmail.com</a></span>
     </div>
   </footer>
 </body>
