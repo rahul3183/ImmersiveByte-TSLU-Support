@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Support and troubleshooting for Truck Simulator Legends: USA.">
+  <meta name="theme-color" content="#111827">
+  <title>Support | Truck Simulator Legends: USA</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111827'/%3E%3Cpath d='M12 20h28v24H12zM40 28h8l6 8v8H40z' fill='%23f7b500'/%3E%3Ccircle cx='22' cy='46' r='6' fill='%23fff'/%3E%3Ccircle cx='46' cy='46' r='6' fill='%23fff'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      color-scheme: dark;
+      --background: #080b11;
+      --surface: #111722;
+      --surface-strong: #171f2d;
+      --text: #f8fafc;
+      --muted: #a9b3c3;
+      --line: #293448;
+      --accent: #f7b500;
+      --accent-hover: #ffc72c;
+      --accent-text: #171100;
+      --max-width: 1060px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      background:
+        radial-gradient(circle at 85% -10%, rgba(247, 181, 0, 0.15), transparent 34rem),
+        var(--background);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+    a { color: inherit; }
+
+    .container {
+      width: min(calc(100% - 2rem), var(--max-width));
+      margin-inline: auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+      background: rgba(8, 11, 17, 0.82);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 72px;
+      gap: 1rem;
+    }
+
+    .brand {
+      font-size: 0.9rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .brand span { color: var(--accent); }
+
+    nav a {
+      color: var(--muted);
+      font-size: 0.95rem;
+      font-weight: 650;
+      text-decoration: none;
+    }
+
+    nav a:hover,
+    nav a:focus-visible { color: var(--text); }
+
+    main { padding: clamp(3rem, 8vw, 6rem) 0; }
+
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.75fr);
+      align-items: center;
+      gap: clamp(2rem, 6vw, 5rem);
+      margin-bottom: clamp(3.5rem, 8vw, 6rem);
+    }
+
+    .eyebrow {
+      margin: 0 0 0.75rem;
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 { line-height: 1.15; }
+
+    h1 {
+      max-width: 14ch;
+      margin: 0;
+      font-size: clamp(2.6rem, 7vw, 5.25rem);
+      letter-spacing: -0.055em;
+    }
+
+    .lead {
+      max-width: 60ch;
+      margin: 1.25rem 0 0;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.2rem);
+    }
+
+    .contact-card {
+      padding: clamp(1.5rem, 4vw, 2.25rem);
+      border: 1px solid #4a4123;
+      border-radius: 20px;
+      background: linear-gradient(145deg, #1e1c15, #111722 72%);
+      box-shadow: 0 28px 70px rgba(0, 0, 0, 0.25);
+    }
+
+    .contact-card h2 {
+      margin: 0 0 0.75rem;
+      font-size: 1.5rem;
+    }
+
+    .contact-card p {
+      margin: 0 0 1.4rem;
+      color: var(--muted);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0.75rem 1.15rem;
+      border-radius: 10px;
+      background: var(--accent);
+      color: var(--accent-text);
+      font-weight: 800;
+      text-decoration: none;
+      transition: background 160ms ease, transform 160ms ease;
+    }
+
+    .button:hover { background: var(--accent-hover); transform: translateY(-1px); }
+    .button:focus-visible { outline: 3px solid #ffffff; outline-offset: 3px; }
+
+    section + section { margin-top: clamp(3.5rem, 8vw, 6rem); }
+
+    .section-heading {
+      margin-bottom: 1.5rem;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      letter-spacing: -0.035em;
+    }
+
+    .section-heading p {
+      margin: 0.65rem 0 0;
+      color: var(--muted);
+    }
+
+    .help-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .help-card {
+      padding: 1.5rem;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--surface);
+    }
+
+    .help-card h3 {
+      margin: 0 0 0.65rem;
+      font-size: 1.15rem;
+    }
+
+    .help-card p,
+    .help-card ol {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .help-card ol { padding-left: 1.25rem; }
+    .help-card li + li { margin-top: 0.45rem; }
+
+    details {
+      border-top: 1px solid var(--line);
+      padding: 1.1rem 0;
+    }
+
+    details:last-child { border-bottom: 1px solid var(--line); }
+
+    summary {
+      cursor: pointer;
+      font-weight: 750;
+    }
+
+    details p {
+      max-width: 70ch;
+      margin: 0.75rem 0 0;
+      color: var(--muted);
+    }
+
+    .report-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem 2rem;
+      margin: 1.25rem 0 0;
+      padding-left: 1.25rem;
+      color: var(--muted);
+    }
+
+    .privacy-note {
+      padding: 1.4rem 1.5rem;
+      border-left: 4px solid var(--accent);
+      background: var(--surface-strong);
+      color: var(--muted);
+    }
+
+    .privacy-note a { color: var(--text); font-weight: 700; }
+
+    footer {
+      padding: 2rem 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 760px) {
+      .intro { grid-template-columns: 1fr; }
+      .help-grid, .report-list { grid-template-columns: 1fr; }
+      h1 { max-width: 12ch; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .button { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <div class="brand">Immersive<span>Bytes</span></div>
+      <nav aria-label="Support navigation">
+        <a href="#contact">Contact support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">Player support</p>
+        <h1 id="page-title">Truck Simulator Legends: USA</h1>
+        <p class="lead">Find quick solutions for purchases, cloud saves, ads and performance. If the problem continues, send us the details and we’ll help investigate.</p>
+      </div>
+
+      <aside class="contact-card" id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Need help?</h2>
+        <p>Email our support team and include your device model, iOS version and a short description of the issue.</p>
+        <!-- Replace YOUR_SUPPORT_EMAIL@example.com in both places before publishing. -->
+        <a class="button" href="mailto:immersiveByte@gmail.com?subject=Truck%20Simulator%20Legends%20Support">Email support</a>
+      </aside>
+    </section>
+
+    <section aria-labelledby="quick-help-title">
+      <div class="section-heading">
+        <h2 id="quick-help-title">Quick help</h2>
+        <p>Try these steps before contacting support.</p>
+      </div>
+
+      <div class="help-grid">
+        <article class="help-card">
+          <h3>Purchase not showing</h3>
+          <ol>
+            <li>Confirm that you are signed in with the Apple Account used for the purchase.</li>
+            <li>Restart the game and open the in-game store again.</li>
+            <li>Use Restore Purchases for eligible non-consumable purchases.</li>
+          </ol>
+        </article>
+
+        <article class="help-card">
+          <h3>Cloud save or load problem</h3>
+          <ol>
+            <li>Confirm that iCloud Drive and Game Center are enabled on the device.</li>
+            <li>Check your internet connection and available iCloud storage.</li>
+            <li>Restart the game before trying Save or Load again.</li>
+          </ol>
+        </article>
+
+        <article class="help-card">
+          <h3>Ads are unavailable</h3>
+          <p>Check your connection, disable network-level content blocking temporarily and try again later. Ad availability can vary by location and time.</p>
+        </article>
+
+        <article class="help-card">
+          <h3>Crash or low performance</h3>
+          <p>Restart the device, close unused apps and install the latest game and iOS updates. Lower the graphics quality if the device becomes hot or the frame rate drops.</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="faq-title">
+      <div class="section-heading">
+        <h2 id="faq-title">Frequently asked questions</h2>
+      </div>
+
+      <details>
+        <summary>Can I move an Android cloud save to iPhone?</summary>
+        <p>Android and iOS currently use separate cloud-save services. A Google Play Games save does not automatically transfer to iCloud.</p>
+      </details>
+
+      <details>
+        <summary>Can consumable purchases be restored?</summary>
+        <p>Consumable items generally cannot be restored through Apple’s Restore Purchases feature. Contact support if a completed purchase was not delivered.</p>
+      </details>
+
+      <details>
+        <summary>Why are personalized ads not appearing?</summary>
+        <p>Personalized advertising depends on your consent choices, age, region and ad availability. The game may show non-personalized ads or no ad when an eligible ad is unavailable.</p>
+      </details>
+    </section>
+
+    <section aria-labelledby="report-title">
+      <div class="section-heading">
+        <h2 id="report-title">What to include in a report</h2>
+        <p>Please do not send your Apple Account password, payment-card information or other sensitive information.</p>
+      </div>
+
+      <ul class="report-list">
+        <li>Device model and iOS version</li>
+        <li>Game version</li>
+        <li>What you expected to happen</li>
+        <li>What happened instead</li>
+        <li>Steps that reproduce the problem</li>
+        <li>A screenshot or short screen recording, if useful</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="privacy-title">
+      <div class="section-heading">
+        <h2 id="privacy-title">Privacy</h2>
+      </div>
+      <div class="privacy-note">
+        Learn how the game handles data in the
+        <a href="https://sites.google.com/view/truck-sim-legends-privacy/home">Truck Simulator Legends privacy policy</a>.
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© 2026 ImmersiveBytes</span>
+      <!-- Replace the visible email address before publishing. -->
+      <span>Support: YOUR_SUPPORT_EMAIL@example.com</span>
+    </div>
+  </footer>
+</body>
+</html>
